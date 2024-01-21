@@ -29,7 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const render = () => {
         const appContent = `
-            <div class="container my-5 py-5">
+        <div class = "userName">
+        <h2>${login} Repositories</h2>
+        </div>
+            <div class="container my-5 py-2">
                 <div class="row justify-content-center">
                     ${getProductsHTML()}
                 </div>
@@ -62,7 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const indexOfFirstPost = indexOfLastPost - postsPerPage;
         const currentProduct = product.slice(indexOfFirstPost, indexOfLastPost);
 
+      
         return currentProduct.map(rep => `
+      
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">${rep.name}</h5>
